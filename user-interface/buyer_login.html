@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  
+  background-color: rgb(92 92 92);
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #021E39;
+  display: flex;
+justify-content: center;
+
+   
+  width: 800px;
+  height: 50px;
+
+ 
+  flex-wrap: wrap;
+  align-content: center;
+   margin: auto;
+
+}
+
+.topnav a {
+ 
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+   display: flex;
+justify-content: center;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: white;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+form {border: 3px solid #f1f1f1;}
+.background{
+  text-align:center;
+    display: flex;
+  width: 300px;
+  height: 500px;
+
+ 
+  flex-wrap: wrap;
+  align-content: center;
+   margin: auto;
+   
+}
+
+.upper {
+  
+  background-color:#021E39;
+  padding: 20px 10px;
+  border: 1px solid #ccc;
+  width:800%;
+  height:50px;
+  font-family: Edwardian Script;
+font-size: 30px;
+font-weight: bold;
+  text-align:left; 
+  color:white;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+button {
+  background-color:#021E39;
+  color: white;
+  padding: 14px 20px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.container
+{
+    display: inline-block;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+  
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px 30px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 3px solid #ccc;
+  box-sizing: border-box;
+}
+.cont{
+  padding: 10px;
+}
+button:hover {
+  opacity: 0.8;
+}
+@media screen and (max-width: 50px) {
+  span.psw {
+     display: block;
+     float: right;
+  }
+  
+  .button cancelbtn {
+     width: 100%;
+  }
+  
+  span.psw {
+  float: left;
+  padding-top: 19px;
+}
+.background{
+  width: 380px;
+  background: #fff;
+  border-radius: 1px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+  border: 3px solid #ccc;
+}
+.navigation{
+  padding-top:30px;
+        padding-bottom:30px;
+        position:absolute;
+        top:0;
+        width:100%;
+        z-index:1;
+        background-color: #021E39;
+        height:50px;
+        display:flex;
+        border: 3px solid #ccc;
+}
+.navbar-logo{
+  padding-left:3%;
+        font-family:Blackadder ITC;
+        font-size:25px;
+        font-weight:bold;
+        text-decoration:none;
+        color:#FFFFFF; 
+        align-items:center;
+      
+}
+
+</style>
+<script>
+  var attempt = 3; // Variable to count number of attempts.
+// Below function Executes on click of login button.
+function validate(){
+var uname = document.getElementById("uname").value;
+var psw = document.getElementById("psw").value;
+if ( username == "linda" && password == "for#123"){
+alert ("Login successfully");
+window.location = "buyer.html"; // Redirecting to other page.
+return false;
+}
+else{
+attempt --;// Decrementing by one.
+alert("You have left "+attempt+" attempt;");
+// Disabling fields after 3 attempts.
+if( attempt == 0){
+document.getElementById("uname").disabled = true;
+document.getElementById("psw").disabled = true;
+document.getElementById("submit").disabled = true;
+return false;
+}
+}
+}
+  </script>
+</head>
+<body>
+<div class="upper">
+  <a class="navbar-logo">E-Farming</a>
+  </div>
+
+<div class="navigation">
+<div class="topnav">
+ <a href="/index.html">Home</a>
+ <a href="#">Admin</a>
+  <a href="seller.html">Seller</a>
+   <a href="buyer.html">Buyer</a>
+   <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+
+</div>
+</div>
+  <div class="background">
+        <form action="/new" method="POST" style="background-color:silver">
+         <div class="container">
+            <div class="row">
+                   <div class="col-10">
+       <label for="uname"><b>Username</b></label>
+      
+           </div>
+            <div class="col-90">
+       <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+              </div>
+              </div>
+               <div class="row">
+                   <div class="col-10">
+       <label for="psw"><b>Password</b></label>
+              </div>
+            <div class="col-90">
+       <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+               </div>
+               </div>
+               <div class="row">
+                  <a href="/buyer.html">
+                <button type="submit" id="submit">Login</button>
+              </a>
+       <label>
+         <input type="checkbox" checked="checked" name="remember"> Remember me
+       </label>
+     </div>
+         
+          
+     <div class="sign">
+           <span class="title">Sign up</span>
+           <span class="pswl"> <a href="buyer_user.html">New User?</a></span>
+        </div>
+          
+     
+     
+     <div class="cancel"><button type="button" class="cancelbtn">Cancel</button>
+      
+     </div>
+   </form>
+   </div>
+        
+</body>
+</html> 

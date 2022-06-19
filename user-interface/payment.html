@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <style type="text/css">
+     table, td, th {  
+     border: 1px solid rgb(2, 0, 0);
+     text-align: left;
+     background-color: rgb(209, 194, 194);
+   }
+   
+   table {
+     border-collapse: collapse;
+     width: 50%;
+    
+   }
+   .table-data{
+       position: relative;
+     left:50px;
+     top:50px;
+     
+   }
+   th, td {
+     padding: 15px;
+   }
+
+   body {font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(92 92 92);
+
+}
+
+
+   .navbar-logo{
+  padding-left:0.5%;
+        font-family:Blackadder ITC;
+        font-size:25px;
+        font-weight:bold;
+        text-decoration:none;
+        color:#FFFFFF; 
+        align-items:center;
+      
+} 
+
+.upper {
+  
+  background-color:#021E39;
+  padding: 20px 10px;
+  border: 1px solid #ccc;
+  width:100%;
+  height:80px;
+  font-family: Edwardian Script;
+font-size: 30px;
+font-weight: bold;
+  text-align:left; 
+  color:white;
+}      
+.topnav {
+  overflow: hidden;
+  background-color:#021E39;
+  display: flex;
+justify-content: center;
+   
+  width: 800px;
+  height: 50px;
+
+ 
+  flex-wrap: wrap;
+  align-content: center;
+   margin: auto;
+}
+
+.topnav a {
+ 
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+   display: flex;
+justify-content: center;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: white;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+  justify-content: center;
+  align-content: center;
+}
+
+.col-25 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+  text-align: center;
+  display:flex;
+  position:absolute;
+   top: 90px;
+   right: 400px;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 40%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding:  16px;
+}
+
+.container {
+  background-color: #b9b3b3;
+  padding: 5px 15px 20px 15px;
+  border: 1px solid rgb(141, 138, 138);
+  border-radius: 3px;
+  justify-content: center;
+  align-content: center;
+
+}
+
+input[type=text] {
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 15px;
+  margin: auto;
+  border: none;
+  width: 70%;
+  height: 40%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: center;
+  display:flex;
+ 
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+</style>
+<script>
+   var attempt = 3; // Variable to count number of attempts.
+// Below function Executes on click of login button.
+function validate(){
+var cardname = document.getElementById("cardname").value;
+var cardnumber= document.getElementById("cardnumber").value;
+var expmonth = document.getElementById("expmonth").value;
+var expyear= document.getElementById("expyear").value;
+var cvv= document.getElementById("cvv").value;
+if ( cardname == "bob" && cardnumber == "123456786" && expmonth == "jan" && expyear == "2022" && cvv == "255"){
+alert ("Login successfully");
+window.location = "order.html"; // Redirecting to other page.
+return false;
+}
+else{
+attempt --;// Decrementing by one.
+alert("You have left "+attempt+" attempt;");
+// Disabling fields after 3 attempts.
+if( attempt == 0){
+document.getElementById("uname").disabled = true;
+document.getElementById("psw").disabled = true;
+document.getElementById("submit").disabled = true;
+return false;
+}
+}
+}
+
+</script>
+</head>
+<body>
+    <div class="upper">
+        <a class="navbar-logo">E-Farming</a>
+      
+      </div>
+           
+     <div class="topnav">
+      <a href="/index.html">Home</a>
+      <a href="/view_item">View items</a>
+       <a href="/buy">Buy</a>
+      <a href="/complain.html">Complaint Page</a>
+      <a href="#">Logout</a>
+     
+     </div>
+     
+<div class="row">
+  <div class="container">
+            <div class="col-50">
+              <h3>Payment</h3>
+              <form action="/payment" method="post" style="background-color:silver">
+              <label for="cname">Name on Card</label>
+              <input type="text" id="cname" name="cardname" placeholder="Full name" required maxlength="40">
+            
+              <label for="ccnum">Credit card number</label>
+              <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" required max="16">
+           
+              <label for="expmonth">Exp Month</label>
+              <input type="text" id="expmonth" name="expmonth" placeholder="January" required maxlength="15">
+              
+              <div class="row">
+                <div class="col-50">
+                  <label for="expyear">Exp Year</label>
+                  <input type="text" id="expyear" name="expyear" placeholder="2020" required max="4">
+              
+                </div>       
+                <div class="col-50">
+                  <label for="cvv">CVV</label>
+                  <input type="text" id="cvv" name="cvv" placeholder="453" required max="3"> 
+               
+                  <a href="/order.html"><input type="submit" value="Continue to checkout" class="btn"> </a>    
+                </div>
+              </div>
+            </div>
+                                     
+          </div>
+                     
+        </form>
+    
+      </div>
+    </div>
+ 
+</div>
+</body>
+</html>

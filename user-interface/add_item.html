@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+body {
+    
+    background-color: rgb(92 92 92);
+
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.postbtn {
+  background-color: #021E39;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+input[type=button]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+    display: flex;
+justify-content: center;
+   
+  width: 800px;
+  height: 500px;
+
+ 
+  flex-wrap: wrap;
+  align-content: center;
+   margin: auto;
+}
+
+    .navbar-logo{
+  padding-left:0.5%;
+        font-family:Blackadder ITC;
+        font-size:25px;
+        font-weight:bold;
+        text-decoration:none;
+        color:#FFFFFF; 
+        align-items:center;
+      
+} 
+
+.upper {
+  
+  background-color:#021E39;
+  padding: 20px 10px;
+  border: 1px solid #ccc;
+  width:100%;
+  height:80px;
+  font-family: Edwardian Script;
+font-size: 30px;
+font-weight: bold;
+  text-align:left; 
+  color:white;
+}      
+.topnav {
+  overflow: hidden;
+  background-color:#021E39;
+  display: flex;
+justify-content: center;
+   
+  width: 800px;
+  height: 60px;
+
+ 
+  flex-wrap: wrap;
+  align-content: center;
+   margin: auto;
+}
+
+.topnav a {
+ 
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+   display: flex;
+justify-content: center;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: white;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+h3{
+ text-align:center;
+}
+</style>
+<script>
+  var attempt = 3; // Variable to count number of attempts.
+// Below function Executes on click of login button.
+function validate(){
+var cname = document.getElementById("cname").value;
+var rname = document.getElementById("rname").value;
+var id = document.getElementById("id").value;
+var fd = document.getElementById("fd").value;
+var r = document.getElementById("r").value;
+var crop = document.getElementById("crop").value;
+if ( cropname == "apple" && croptype == "fruit" && cropid == "a1" && required_quantity == "200" && farmername == "chris" && usd == "100") {
+alert ("Login successfully");
+window.location = "item_success.html"; // Redirecting to other page.
+return false;
+}
+else{
+attempt --;// Decrementing by one.
+alert("You have left "+attempt+" attempt;");
+// Disabling fields after 3 attempts.
+if( attempt == 0){
+document.getElementById("cname").disabled = true;
+document.getElementById("rname").disabled = true;
+document.getElementById("id").disabled = true;
+document.getElementById("fd").disabled = true;
+document.getElementById("r").disabled = true;
+document.getElementById("crop").disabled = true;
+document.getElementById("button").disabled = true;
+return false;
+}
+}
+}
+  </script>
+</head>
+<body>
+ <div class="upper">
+   <a class="navbar-logo">E-Farming</a>
+ 
+ </div>
+      
+<div class="topnav">
+ <a href="/add_item.html">Add Item</a>
+  <a href="/crop_recieve">Crop recieve</a>
+  <a href="/seller_in.html">Logout</a>
+
+</div>
+
+<h3>Post Your Required Crop</h3>
+
+<div class="container">
+  
+  <form action="/action_page" method="POST">
+    <label for="cname">Crop Name</label>
+    <input type="text" id="cname" name="cname" placeholder="Enter Crop Name" required>
+
+    <label for="ctype">Crop Type</label>
+    <input type="text" id="crop" name="crop" placeholder="Fruit or Grain" required>
+   
+
+    <label for="id">Crop Id</label>
+    <input type="text" id="id" name="id" placeholder="Enter Crop Id" required>
+    
+     
+
+    <label for="rname">Required quantity</label>
+    <input type="text" id="rname" name="rname" placeholder="Enter Required Quantity" required>
+
+    <label for="fd">Farmer Name</label>
+    <input type="text" id="fd" name="fd" placeholder="Enter your name" required>
+
+    <label for="money">Usd: </label>
+    <input type="number" id="r" name="r" placeholder="Enter amount $$$" required>
+
+   
+
+     <div class="post">
+       <a href="item_success.html"><button type="submit" id="button" class="postbtn">Post</button></a>
+     </div>
+  </form>
+</div>
+</body>
+</html>

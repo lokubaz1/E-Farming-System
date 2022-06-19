@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+
+<style>
+.navigation{
+        padding-top:30px;
+        padding-bottom:30px;
+        position:absolute;
+        top:0;
+        width:100%;
+        z-index:1;
+        background-color: #021E39;
+        height:50px;
+        display:flex;
+       
+    }
+    
+     .navbar-right{
+        float:right;
+        padding-right:50%;
+        display:flex;
+        justify-content:right;
+        align-items:center;
+        padding-right: 10px;
+        flex:10%;
+    }
+    
+.navbar-right a{
+        text-decoration:none;
+        padding:10px;
+        color: #FFFFFF;
+        font-family:Calibri;
+        font-weight:900;
+        font-size: 25px;
+        margin-left: 15px;
+    }
+    .navbar-right a:hover{
+        text-decoration:underline;
+    }
+
+.navbar-logo{
+        padding-left:3%;
+        font-family:Blackadder ITC;
+        font-size:25px;
+        font-weight:bold;
+        text-decoration:none;
+        color:#FFFFFF; 
+        align-items:center;
+    }
+     .video{
+ position: fixed;
+    z-index: -1; 
+     right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  filter: brightness(70%);
+ }
+ 
+ .background-wrap {
+                position: fixed;
+                z-index: -1000;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                top: 0;
+                left: 0;
+            }
+
+.content {
+                position: absolute;
+                width: 100%;
+                min-height: 100%;
+                z-index: 1000;
+               
+    background-color: rgb(92 92 92); 
+            }
+       .content h1 {
+                text-align: left;
+                font-size: 60px;
+                text-transform: none;
+                font-weight: 300;
+                color: #fff;
+                padding-top: 9%;
+                margin-bottom: 5px;
+            }
+            .content h3 {
+                text-align: center;
+                font-size: 30px;
+                letter-spacing: 3px;
+                color: #fff;
+            }  
+            .content p {
+                text-align: center;
+                font-size: 15px;
+                letter-spacing: 2px;
+                color: #fff;
+            }  
+            .socialmedia{
+              position: absolute;            
+              bottom: 20px;
+              z-index: -1000;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }  
+            
+            .socialmedia li{
+               list-style: none;
+               max-width: 453;
+            } 
+           .socialmedia li a{
+             display: inline-flex;
+      text-decoration: none;
+      font-size: 5px;
+      width: 60px;
+      height: 60px;
+      color: #fff;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin: 4px 0;
+            }   
+.socialmedia li a:hover{
+      transform: scale(0.9) translateY(-15px);
+-webkit-text-fill-color: transparent;
+
+  width: 100%;
+  margin-top: 10%;
+  display: block;
+   justify-content: center;
+      align-items: center;
+}
+
+</style>
+</head>
+<body>
+<header class="header">
+        <nav class="navigation">
+            <a href="#" class="navbar-logo">E-Farming</a>
+            <div class="navbar-right">
+                <a href="index.html">Home</a>
+                <a href="admin_login.html">Admin</a>
+                <a href="/seller.html">Seller</a>
+                <a href="/buyer_login.html">Buyer</a>
+                <a href="/about.html">About Us</a>
+                <a href="/contact.html">Contact</a>
+            </div>
+        </nav>
+        <div class="background-wrap">
+           <video autoplay muted loop  class="video">  
+               <source src="videos/farm.mp4" type="video/mp4">
+           </video>
+            <div class="content">
+                <h1>About Us</h1>
+                <h3>Welcome to E-Farming</h3>
+    
+               <p> This E-Farming has been developed to help you discover and sample the many fresh,</p> 
+                   <p> delicilous and nutritious foods grown and produced in Binghamton Region.</p> 
+                    <p>It’ll help us connect with you "our respected customers" and build an authentic brand that are healthier food.</p><br>
+                   <p> For more information</p>  
+                       <p> Please call us 3156457980</p>          
+            </div>
+              
+        </div>
+       
+             <div class="para">
+    <h2>Find Us On</h2>
+    
+</div>
+   <div class="social">
+   <ul class="socialmedia">
+       <li> <a href="#"><img src="photos/facebook.png" alt=""></a></li>
+       <li> <a href="#"><img src="photos/instagram.png" alt=""></a></li>
+       <li> <a href="#"><img src="photos/whatsup.png" alt=""></a></li>
+       <li> <a href="#"><img src="photos/youtube.png" alt=""></a></li>
+   </ul>
+</div>
+        
+       
+    </header>
+    
+    <footer>
+           <div class="footer">
+              <div class="courses">
+                  <div class="row1">
+                  
+                  </div>
+              
+              </div>
+           
+           
+           </div>
+    
+    </footer>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration form for  new sellers</title>
+
+<style>
+       
+       body{
+ 
+        background-color: rgb(92 92 92);
+}
+       .background{
+    text-align:center;
+    
+}
+.container
+{
+    display: inline-block;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+}
+input[type=text], input[type=password],input[type=email], input[type=tel]  {
+  width: 100%;
+  padding: 5px 10px;
+  margin: 3px 0;
+  display: inline-block;
+  border: px solid #ccc;
+  box-sizing: border-box;
+}
+.nav{
+       height:80px;
+       width:100%;
+       background-color:#021E39 ;
+     
+       font-family: Edwardian Script;
+font-size: 30px;
+font-weight: bold;
+  text-align:left; 
+  color:#FFFFFF; 
+}
+form {border: 3px solid #f1f1f1;
+    background-color: silver;}
+.container{
+  
+    display: flex;
+  width: 10%;
+  height: 700px;
+
+ 
+  flex-wrap: wrap;
+  align-content: center;
+   margin: auto;
+   flex:100%;
+   
+}
+
+.title{
+
+        
+        font-size:25px;
+        font-weight:bold;
+        text-decoration:none;
+        color:#FFFFFF; 
+       
+}
+.title a{
+        text-decoration:none;
+        padding:10px;
+        color: #FFFFFF;
+        font-family:Blackadder ITC;
+        font-weight:900;
+        font-size: 25px;
+        margin-left: 10px;
+        align-items:center;
+        padding-left:3%;
+       justify-content: center;
+    }
+    .title a:hover{
+        text-decoration:underline;
+    }
+
+    #submit{
+        background-color: #021E39;
+        color:#FFFFFF;
+    }
+
+</style>
+
+</head>
+<body>
+   
+    <div class="nav">
+    
+        <span class="title"><a href="buyer_login.html">Back</a></span>
+     </div>
+<div class=background>
+    
+  <div class="container">
+      <form action="/buy_sign" method="POST">
+      <div class="row">
+          <div class="col-10">
+              <label for="fname">First Name:</label>
+          </div>
+          <div class="col-90">
+              <input type="text" id="fname" name="fname" placeholder="Enter your first name">
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-10">
+              <label for="lname">Last Name:</label>
+          </div>
+          <div class="col-90">
+              <input type="text" id="lname" name="lname" placeholder="Enter your last name">
+          </div>
+      </div>
+       <div class="row">
+          <div class="col-10">
+              <label for="lname">User Name:</label>
+          </div>
+          <div class="col-90">
+              <input type="text" id="uname" name="uname" placeholder="Enter your user name">
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-10">
+              <label for="email">Email:</label>
+          </div>
+          <div class="col-90">
+              <input type="email" id="email" name="email" placeholder="it should contain @,.">
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-10">
+              <label for="mobile">Mobile:</label>
+          </div>
+          <div class="col-90">
+              <input type="tel" id="contact" name="contact" placeholder="only 10 digits are allowed">
+          </div>
+      </div>
+     
+          
+      <div class="row">
+          <div class="col-10">
+              <label for="dob">Date Of Birth:</label>
+          </div>
+          <div class="col-90">
+              <input type="Date" id="datebirth" name="datebirth">
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-10">
+              <label for="address">Address:</label>
+          </div>
+          <div class="col-90">
+              <textarea name="address" id="address" cols="30" rows="4"></textarea>
+          </div>
+      </div>
+      
+      
+      
+      <br>
+      <input type="submit" value="Submit" id="submit" />
+    </form>
+      
+          </div>
+          </div>
+        </body>
+        </html> 
