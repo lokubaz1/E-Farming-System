@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <style type="text/css">
+     table, td, th {  
+     border: 1px solid rgb(2, 0, 0);
+     text-align: left;
+     background-color: rgb(209, 194, 194);
+   }
+   
+   table {
+     border-collapse: collapse;
+     width: 50%;
+    
+   }
+   .table-data{
+       position: relative;
+     left:50px;
+     top:50px;
+     
+   }
+   th, td {
+     padding: 15px;
+   }
+
+   body {font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(92 92 92);
+
+}
+
+
+   .navbar-logo{
+  padding-left:0.5%;
+        font-family:Blackadder ITC;
+        font-size:25px;
+        font-weight:bold;
+        text-decoration:none;
+        color:#FFFFFF; 
+        align-items:center;
+      
+} 
+
+.upper {
+  
+  background-color:#021E39;
+  padding: 20px 10px;
+  border: 1px solid #ccc;
+  width:100%;
+  height:80px;
+  font-family: Edwardian Script;
+font-size: 30px;
+font-weight: bold;
+  text-align:left; 
+  color:white;
+}      
+.topnav {
+  overflow: hidden;
+  background-color:#021E39;
+  display: flex;
+justify-content: center;
+   
+  width: 800px;
+  height: 50px;
+
+ 
+  flex-wrap: wrap;
+  align-content: center;
+   margin: auto;
+}
+
+.topnav a {
+ 
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+   display: flex;
+justify-content: center;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: white;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+    <div class="upper">
+        <a class="navbar-logo">E-Farming</a>
+      
+      </div>
+           
+     <div class="topnav">
+      <a href="/index.html">Home</a>
+      <a href="/products.html">View items</a>
+       <a href="/buy">Buy</a>
+       <a href="/result">Result</a>
+      <a href="/complain.html">Complaint Page</a>
+      <a href="#">Logout</a>
+     
+     </div>
+
+<!--====form section start====-->
+<div class="table-data">
+    <table border="1" >
+        <tr>
+       
+            <th>Crop Name</th>
+            <th>Crop Id</th>
+            <th>Quantity</th>
+            <th>Farmer Name</th>
+            <th>Usd</th>
+            
+        </tr>
+        
+        <%
+       if(cropData.length!=0){
+        var i=1;
+        cropData.forEach(function(cropTable) {
+          %>
+
+        
+        <tr>
+           
+            <td><%=cropTable.cname %></td>
+            <td><%=cropTable.id %></td>
+            <td><%=cropTable.rname %></td>
+            <td><%=cropTable.fd %></td>
+            <td><%=cropTable.r %></td>
+           
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+    </table>
+    </div>
+
+
+</body>
+</html>
