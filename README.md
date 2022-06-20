@@ -5,8 +5,8 @@ a platform for buying and selling farm products online. This online e-farming pr
 help farmers sell their products online. The main objective of this project is to deliver
 farming products especially organic food to buyers and help farmers use a computerized
 approach for better profits. 
-Technologies Used
-HTML
-JAVASCRIPT
-EJS
+#Technologies Used
+Html
+Javascript
+Ejs
 CSS
